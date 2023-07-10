@@ -5,9 +5,9 @@ export const CountContext = createContext();
 
 export const StateProvider = ({children}) => {
 
-    const [count, dispatch] = useReducer(reducer, initaialState)
+    const [state, dispatch] = useReducer(reducer, initaialState)
 
-   return ( <CountContext.Provider value = {{countState: count, countDispatch: dispatch}}>
+   return ( <CountContext.Provider value = {{countState: state, countDispatch: dispatch}}>
                 {children}
             </CountContext.Provider>
    )

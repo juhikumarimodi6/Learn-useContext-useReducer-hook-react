@@ -8,10 +8,11 @@ function App() {
   const countContext = useGlobalState();
   return (
       <div className="App">
-        count - {countContext.countState}
+        count - {countContext.countState.count}
         <ComponentA />
         <ComponentB />
         <ComponentC />
+        Total Click count - {countContext.countState.clickCount}
       </div>
   );
 }
